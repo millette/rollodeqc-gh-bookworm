@@ -15,9 +15,7 @@ test('bookworm, a page turner', async t => {
   }
 
   const pageTurner = g => {
-    if (g === 'joe') {
-      return Promise.resolve({ headers: { yes: 'sir, joe' } })
-    }
+    if (g === 'joe') { return Promise.resolve({ headers: { yes: 'sir, joe' } }) }
     return Promise.resolve({ items: [], headers: { link: { next: 'joe' }, yes: 'mam, ' + g } })
   }
 
@@ -39,4 +37,16 @@ test('bookworm, ghGot', async t => {
   }
   const result = await fn.bookworm('search/users?q=bob&per_page=100', ghGot, methods)
   t.is(result.body.items.length, 1000)
+})
+
+test('bookworm, default methods', async t => {
+  const pageTurner = g => {
+    if (g === 'joe') {
+      return Promise.resolve({ headers: { yes: 'sir, joe' } })
+    }
+    return Promise.resolve({ items: [], headers: { link: { next: 'joe' }, yes: 'mam, ' + g } })
+  }
+
+  const result = await fn.bookworm('boo', pageTurner, { nextLink: r => r.headers && r.headers.link && r.headers.link.next })
+  t.is(result.headers.yes, 'sir, joe')
 })
