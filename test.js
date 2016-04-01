@@ -27,7 +27,7 @@ test('bookworm, a page turner', async t => {
 })
 
 test('bookworm, ghGot', async t => {
-  const methods2 = {
+  const methods = {
     wait: r => (r.headers && r.headers['x-ratelimit-reset'])
       ? (1000 * parseInt(r.headers['x-ratelimit-reset'], 10) - Date.now()) /
         parseInt(r.headers['x-ratelimit-remaining'], 10)
@@ -38,6 +38,6 @@ test('bookworm, ghGot', async t => {
       return inner
     }
   }
-  const result = await fn.bookworm('search/users?q=bob&per_page=100', ghGot, methods2)
+  const result = await fn.bookworm('search/users?q=bob&per_page=100', ghGot, methods)
   t.is(result.body.items.length, 1000)
 })
