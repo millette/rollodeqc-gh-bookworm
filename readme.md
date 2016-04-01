@@ -1,45 +1,49 @@
-# rollodeqc-gh-bookworm [![Build Status](https://travis-ci.org/millette/rollodeqc-gh-bookworm.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-bookworm)
-
-> My ace module
-
+# rollodeqc-gh-bookworm
+> Rate limited HTTP query iterator.
 
 ## Install
-
 ```
 $ npm install --save rollodeqc-gh-bookworm
 ```
 
-
 ## Usage
-
 ```js
 const rollodeqcGhBookworm = require('rollodeqc-gh-bookworm');
 
-rollodeqcGhBookworm('unicorns');
-//=> 'unicorns & rainbows'
+rollodeqcGhBookworm('unicorns', ghGot);
+//=> (yet unspecified)
 ```
 
-
 ## API
+### rollodeqcGhBookworm(query, fetcher[, methods])
+Run fetcher(query) in a loop until done. Returns a promise.
 
-### rollodeqcGhBookworm(input, [options])
+#### query
+Type: `string`|`object`
 
-#### input
+`string` values can represent a search query or a complete GitHub API URL
+(beginning with http:// or https://).
+Otherwise see the tests and source code if query is an `object`.
 
-Type: `string`
+#### fetcher
+Function to use to fetch information from GitHub. Must return a promise.
 
-Lorem ipsum.
+#### methods
+##### wait
+Lorem ipsum...
 
-#### options
+##### nextLink
+Lorem ipsum...
 
-##### foo
+##### getItems
+Lorem ipsum...
 
-Type: `boolean`<br>
-Default: `false`
+##### updateItems
+Lorem ipsum...
 
-Lorem ipsum.
-
+## Dependencies
+* lodash.defaults
+* rollodeqc-gh-utils
 
 ## License
-
-MIT © [Robin Millette](http://robin.millette.info)
+AGPL-v3 © [Robin Millette](http://robin.millette.info)

@@ -1,9 +1,10 @@
 {
   "name": "rollodeqc-gh-bookworm",
-  "version": "0.0.0",
-  "description": "My ace module",
-  "license": "MIT",
+  "version": "0.1.0",
+  "description": "Rate limited HTTP query iterator.",
+  "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-bookworm",
+  "readme": "readme.md",
   "author": {
     "name": "Robin Millette",
     "email": "robin@millette.info",
@@ -25,10 +26,14 @@
     "utils",
     "pagination"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "lodash.defaults": "^4.0.1",
+    "rollodeqc-gh-utils": "^0.1.0"
+  },
   "devDependencies": {
     "ava": "^0.12.0",
     "babel-eslint": "^6.0.0",
+    "gh-got": "^2.4.0",
     "standard": "^6.0.8"
   },
   "standard": {
