@@ -28,7 +28,7 @@ const utils = require('rollodeqc-gh-utils')
 
 const defaultMethods = {
   wait: utils.wait,
-  nextLink: (result) => utils.links(result).next,
+  nextLink: (result) => Promise.resolve(utils.links(result).next),
   getItems: (result) => result && result.items,
   updateItems: (result, inner) => {
     inner.items = result.items.concat(inner.items)
@@ -43,15 +43,16 @@ exports.bookworm = (query, fetcher, methods) => {
 
   return fetcher(query).then(function collect (result) {
     return new Promise((resolve, reject) => {
-      const next = methods.nextLink(result)
-      if (next && methods.getItems(result)) {
-        setTimeout(
-          () => resolve(fetcher(next).then(collect).then((inner) =>
-            methods.updateItems(result, inner))),
-          methods.wait(result))
-      } else {
-        resolve(result)
-      }
+      methods.nextLink(result).then((next) => {
+        if (next && methods.getItems(result)) {
+          setTimeout(
+            () => resolve(fetcher(next).then(collect).then((inner) =>
+              methods.updateItems(result, inner))),
+            methods.wait(result))
+        } else {
+          resolve(result)
+        }
+      })
     })
   })
 }
