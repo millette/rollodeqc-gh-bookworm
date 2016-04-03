@@ -19,27 +19,11 @@ test('bookworm, a page turner', async t => {
     }
   }
 
-/*
-  const pageTurner = g => {
-    if (g === 'joe') { return Promise.resolve({ headers: { yes: 'sir, joe' } }) }
-    return Promise.resolve({ items: [], headers: { link: { next: 'joe' }, yes: 'mam, ' + g } })
-  }
-*/
-
   const result = await fn.bookworm('boo', pageTurner, methods)
   t.is(result.headers.yes, 'sir, joe')
 })
 
 test('bookworm, default methods', async t => {
-/*
-  const pageTurner = g => {
-    if (g === 'joe') {
-      return Promise.resolve({ headers: { yes: 'sir, joe' } })
-    }
-    return Promise.resolve({ items: [], headers: { link: { next: 'joe' }, yes: 'mam, ' + g } })
-  }
-*/
-
   const result = await fn.bookworm('boo', pageTurner, { nextLink: r =>
     Promise.resolve(r.headers && r.headers.link && r.headers.link.next)
   })
