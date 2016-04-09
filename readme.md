@@ -1,4 +1,4 @@
-# rollodeqc-gh-bookworm
+# rollodeqc-gh-bookworm [![Build Status](https://travis-ci.org/millette/rollodeqc-gh-bookworm.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-bookworm)
 > Rate limited HTTP query iterator.
 
 ## Install
