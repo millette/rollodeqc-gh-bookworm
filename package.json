@@ -26,13 +26,14 @@
     "pagination"
   ],
   "dependencies": {
+    "gh-got": "^4.0.0",
     "lodash.defaults": "^4.0.1",
     "rollodeqc-gh-utils": "^0.3.0"
   },
   "devDependencies": {
     "ava": "^0.12.0",
     "babel-eslint": "^6.0.0",
-    "gh-got": "^2.4.0",
+    "gh-got": "^4.0.0",
     "nyc": "^6.1.1",
     "standard": "^6.0.8"
   },
