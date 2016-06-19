@@ -1,6 +1,6 @@
 {
   "name": "rollodeqc-gh-bookworm",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Rate limited HTTP query iterator.",
   "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-bookworm",
@@ -9,7 +9,9 @@
     "email": "robin@millette.info",
     "url": "http://robin.millette.info"
   },
-  "engines": { "node": ">=4" },
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "standard && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
