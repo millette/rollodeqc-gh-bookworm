@@ -1,4 +1,8 @@
-# rollodeqc-gh-bookworm [![Build Status](https://travis-ci.org/millette/rollodeqc-gh-bookworm.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-bookworm) [![Coverage Status](https://coveralls.io/repos/github/millette/rollodeqc-gh-bookworm/badge.svg?branch=master)](https://coveralls.io/github/millette/rollodeqc-gh-bookworm?branch=master)
+# rollodeqc-gh-bookworm
+[![Build Status](https://travis-ci.org/millette/rollodeqc-gh-bookworm.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-bookworm)
+[![Coverage Status](https://coveralls.io/repos/github/millette/rollodeqc-gh-bookworm/badge.svg?branch=master)](https://coveralls.io/github/millette/rollodeqc-gh-bookworm?branch=master)
+[![Dependency Status](https://gemnasium.com/badges/github.com/millette/rollodeqc-gh-bookworm.svg)](https://gemnasium.com/github.com/millette/rollodeqc-gh-bookworm)
+
 > Rate limited HTTP query iterator.
 
 ## Install
