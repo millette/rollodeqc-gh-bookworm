@@ -1,4 +1,3 @@
-/*eslint arrow-parens: [2, "as-needed"]*/
 'use strict'
 import ghGot from 'gh-got'
 import test from 'ava'

@@ -27,9 +27,9 @@
     "pagination"
   ],
   "dependencies": {
-    "gh-got": "^4.0.0",
-    "lodash.defaults": "^4.0.1",
-    "rollodeqc-gh-utils": "^0.3.1"
+    "gh-got": "^5.0.0",
+    "lodash.defaults": "^4.2.0",
+    "rollodeqc-gh-utils": "^0.3.4"
   },
   "devDependencies": {
     "ava": "^0.12.0",
