@@ -1,6 +1,6 @@
 {
   "name": "rollodeqc-gh-bookworm",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Rate limited HTTP query iterator.",
   "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-bookworm",
