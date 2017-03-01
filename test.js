@@ -32,7 +32,7 @@ test('bookworm, default methods', async t => {
 test('bookworm, ghGot', async t => {
   const methods = {
     wait: r => (r.headers && r.headers['x-ratelimit-reset'])
-      ? (1000 * parseInt(r.headers['x-ratelimit-reset'], 10) - Date.now()) /
+      ? ((1000 * parseInt(r.headers['x-ratelimit-reset'], 10)) - Date.now()) /
         parseInt(r.headers['x-ratelimit-remaining'], 10)
       : 2000,
     getItems: r => r && r.body && r.body.items,
