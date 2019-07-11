@@ -28,7 +28,7 @@
     "pagination"
   ],
   "dependencies": {
-    "gh-got": "7.1.0",
+    "gh-got": "^6.0.0",
     "lodash.defaults": "^4.2.0",
     "rollodeqc-gh-utils": "^0.4.3"
   },
