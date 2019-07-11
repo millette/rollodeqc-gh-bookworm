@@ -30,7 +30,7 @@
   "dependencies": {
     "gh-got": "7.1.0",
     "lodash.defaults": "^4.2.0",
-    "rollodeqc-gh-utils": "^0.3.4"
+    "rollodeqc-gh-utils": "^0.4.3"
   },
   "devDependencies": {
     "ava": "^2.2.0",
