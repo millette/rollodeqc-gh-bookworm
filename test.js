@@ -23,8 +23,9 @@ test('bookworm, a page turner', async t => {
 })
 
 test('bookworm, default methods', async t => {
-  const result = await fn.bookworm('boo', pageTurner, { nextLink: r =>
-    Promise.resolve(r.headers && r.headers.link && r.headers.link.next)
+  const result = await fn.bookworm('boo', pageTurner, {
+    nextLink: r =>
+      Promise.resolve(r.headers && r.headers.link && r.headers.link.next)
   })
   t.is(result.headers.yes, 'sir, joe')
 })
